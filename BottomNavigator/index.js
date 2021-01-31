@@ -18,6 +18,19 @@ import Map from '../Screens/Map'
 import Qrcode from '../Screens/Qrcode'
 import Info from '../Screens/Info'
 
+fetch('localhost:3030', {
+  method: 'POST',
+  headers: {
+  Accept: 'application/json',
+  'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    date: '2021-01-01',
+    destination: 'ORD',
+    origin: 'DFW'
+  }),
+  })
+  
 
 {
   /* <a target="_blank" href="https://icons8.com/icons/set/qr-code--v2">QR Code icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */

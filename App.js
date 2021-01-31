@@ -7,7 +7,9 @@ import Info from "./Screens/Info"
 export default class App extends React.Component {
   render() {
     return (
+      
       <BottomNavigator/>
+      
 
       // <Info/>
       );
