@@ -9,12 +9,22 @@ import {
   Animated,
   Text,
   Alert,
+
 } from "react-native";
+
+import {createStackNavigator} from 'react-navigation-stack'
+
+import Map from '../Screens/Map'
+import Qrcode from '../Screens/Qrcode'
+import Info from '../Screens/Info'
+
+
 {
   /* <a target="_blank" href="https://icons8.com/icons/set/qr-code--v2">QR Code icon</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a> */
 }
 
 export default class BottomNavigator extends Component {
+   
   toggleOpen = () => {};
 
   render() {
@@ -39,13 +49,14 @@ export default class BottomNavigator extends Component {
             zIndex: 10,
           }}
         >
-          <TouchableWithoutFeedback >
+          <TouchableWithoutFeedback onPress={console.log("hi")} >
             <View style={[styles.button, styles.actionBtn]}>
+                
               <Image
                 style={{ width: 60, height: 60 }}
                 resizeMode="contain"
                 source={{
-                  uri:
+                    uri:
                     "https://www.flaticon.com/svg/vstatic/svg/2268/2268625.svg?token=exp=1612099685~hmac=9520a9741b2bc837761bfcac0a9d5312",
                 }}
               />
@@ -86,7 +97,9 @@ export default class BottomNavigator extends Component {
           >
             <TouchableOpacity
               onPress={() => {
-                this.props.navigation.navigate("Map");
+                
+              
+                
               }}
             >
               <Image
@@ -142,6 +155,12 @@ export default class BottomNavigator extends Component {
     );
   }
 }
+
+// const AppNavigator = createStackNavigator({
+//     Mapscreen: Map,
+// },{
+//     initalRouteName:'Info'
+// });
 
 const styles = StyleSheet.create({
   MainContainer: {
